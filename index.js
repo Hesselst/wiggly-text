@@ -35,9 +35,9 @@ function generateWiggleKeyframes(name) {
     return `
         @keyframes ${name} {
             0%   { transform: translateY(0) translateX(0); }
-            25%  { transform: translateY(${randomPx(-1, 1)}) translateX(${randomPx(-0.5, 0.5)}); }
-            50%  { transform: translateY(${randomPx(-1, 0.5)}) translateX(${randomPx(-0.5, 0.5)}); }
-            75%  { transform: translateY(${randomPx(-1, 1)}) translateX(${randomPx(0, 0,5)}); }
+            25%  { transform: translateY(${randomPx(-0.5, 1)}) translateX(${randomPx(-0.5, 0.5)}); }
+            50%  { transform: translateY(${randomPx(-0.5, 0.5)}) translateX(${randomPx(-0.5, 0.5)}); }
+            75%  { transform: translateY(${randomPx(-0.5, 0.5)}) translateX(${randomPx(0, 0.3)}); }
             100% { transform: translateY(0) translateX(0); }
         }
     `;
@@ -69,11 +69,6 @@ function addWigglyAnimToSpans() {
     const styleSheet = document.createElement('style');
     styleSheet.textContent = styles;
     document.head.appendChild(styleSheet);
-}
-
-function init() {
-    separateLettersIntoSpans();
-    addWigglyAnimToSpans();
 }
 
 document.addEventListener('DOMContentLoaded', function() {
