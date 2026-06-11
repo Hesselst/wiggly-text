@@ -1,0 +1,10 @@
+{
+  "name": "wigglytext",
+  "version": "1.0.0",
+  "description": "Adds a wiggly animation to elements with the .wiggly-text class",
+  "main": "index.js",
+  "author": "Hesselst",
+  "type": "module",
+  "keywords": ["animation", "text", "wiggle"],
+  "license": "MIT"
+}
