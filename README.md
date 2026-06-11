@@ -4,15 +4,23 @@ A lightweight JavaScript package that adds a wiggly animation to any HTML elemen
 
 # Installation
 
-**Via npm**
+**1. Via CDN (recommended)**
+```html
+<script src="https://unpkg.com/@hesselst/wigglytext"></script>
+```
+
+**2. Via npm**
 ```bash
 npm install @hesselst/wigglytext
 ```
-
-**Via CDN**
-```html
-
+Then import it in your JS file:
+```javascript
+import '@hesselst/wigglytext';
 ```
+> Note: for non-bundler users, use the script tag instead:
+> ```html
+> <script src="node_modules/@hesselst/wigglytext/index.js"></script>
+> ```
 
 ## Usage/Examples
 
