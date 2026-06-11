@@ -4,12 +4,18 @@
   "description": "Adds a wiggly animation to elements with the .wiggly-text class",
   "main": "index.js",
   "author": "hesselst",
-  "keywords": ["animation", "text", "wiggle"],
+  "keywords": [
+    "animation",
+    "text",
+    "wiggle"
+  ],
   "license": "MIT",
-  "files": ["index.js"],
+  "files": [
+    "index.js"
+  ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/Hesselst/wiggly-text"
+    "url": "git+https://github.com/Hesselst/wiggly-text.git"
   },
   "homepage": "https://github.com/Hesselst/wiggly-text#readme"
 }
