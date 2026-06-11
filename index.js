@@ -15,6 +15,7 @@ function seperateLettersIntoSpans() {
 
         for (let j = 0; j < letters.length; j++) {
             const letter = letters[j];
+            // Wrap each letter in a span, except for spaces
             if (letter === " ") {
                 wrappedLetters += ' ';
             } else {
@@ -56,41 +57,19 @@ function addWigglyAnimToSpans() {
 
         for (let j = 0; j < spans.length; j++) {
             const animName = `wiggleLetter-${i}-${j}`;
+            // Add keyframes for the animation
             styles += generateWiggleKeyframes(animName);
 
             spans[j].style.animation = `${animName} 1s infinite`;
-            spans[j].style.animationDelay = `${j * 0.1}s`;
             spans[j].style.display = 'inline-block';
         }
     }
 
-    // Inject all keyframes at once
+    // Add the css to the document
     const styleSheet = document.createElement('style');
     styleSheet.textContent = styles;
     document.head.appendChild(styleSheet);
 }
-
-// function addKeyframesAnimCss() {
-//     var styles = `
-//         @keyframes wiggleLetter1 {
-//             0%   { transform: translateY(0.1) translateX(0); }
-//             25%  { transform: translateY(0px) translateX(0.2px); }
-//             75%  { transform: translateY(-0.3px) translateX(-0.1px); }
-//             100% { transform: translateY(0.2) translateX(0); }
-//         }
-
-//         @keyframes wiggleLetter2 {
-//             0%   { transform: translateY(0) translateX(0); }
-//             25%  { transform: translateY(-0.3px) translateX(-0.2px); }
-//             75%  { transform: translateY(0.2px) translateX(0.1px); }
-//             100% { transform: translateY(0) translateX(0); }
-//         }
-//     `;
-
-//     var styleSheet = document.createElement("style")
-//     styleSheet.textContent = styles
-//     document.head.appendChild(styleSheet)
-// }
 
 function init() {
     separateLettersIntoSpans();
@@ -98,7 +77,6 @@ function init() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    // addKeyframesAnimCss();
     seperateLettersIntoSpans();
     addWigglyAnimToSpans();
 });
