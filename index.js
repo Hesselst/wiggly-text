@@ -75,3 +75,5 @@ document.addEventListener('DOMContentLoaded', function() {
     seperateLettersIntoSpans();
     addWigglyAnimToSpans();
 });
+
+export default {}
