@@ -35,5 +35,5 @@ Add the class to any element containing text:
 
 ## 🔗 Links
 
-- [npm](https://www.npmjs.com/package/@hesselst/wiggly-text)
+- [npm](https://www.npmjs.com/package/@hesselst/wigglytext)
 - [GitHub](https://github.com/Hesselst/wiggly-text)
